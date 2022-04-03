@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ts-form-to-table/static/css/main.073c9b0a.css",
+    "main.js": "/ts-form-to-table/static/js/main.8f3ef589.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/ts-form-to-table/static/js/787.c4e7f8f9.chunk.js",
+    "index.html": "/ts-form-to-table/index.html",
+    "main.073c9b0a.css.map": "/ts-form-to-table/static/css/main.073c9b0a.css.map",
+    "main.8f3ef589.js.map": "/ts-form-to-table/static/js/main.8f3ef589.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/ts-form-to-table/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.8f3ef589.js"
+  ]
+}
