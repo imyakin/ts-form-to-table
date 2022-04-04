@@ -3,7 +3,7 @@ import {nanoid} from 'nanoid'
 import './App.css';
 import Form from './components/Form/Form';
 import Table from './components/Table/Table';
-import { IFormUser, IUser, fieldName } from './models/IUser';
+import { IFormUser, IUser } from './models/intefaces';
 
 
 function App() {
@@ -53,6 +53,14 @@ function App() {
     setAllUsers(newUsers)
   }
 
+  const deleteHadler = (userId: string) => {
+    const users = [...allUsers]
+    const index = allUsers.findIndex(user => user.id === userId)
+
+    users.splice(index, 1)
+    setAllUsers(users)
+  }
+
   return (
     <div className="App">
       <h1>Contacts' book</h1>
@@ -60,7 +68,10 @@ function App() {
           onSubmitHandler={submitHandler}
           onChangeHandler={changeHandler}
         />
-        <Table allUsers={allUsers}/>
+        <Table 
+          allUsers={allUsers}
+          onDeleteHadler={deleteHadler}
+        />
     </div>
   );
 }

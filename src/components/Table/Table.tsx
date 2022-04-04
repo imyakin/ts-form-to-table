@@ -1,11 +1,12 @@
 import React from "react";
-import { IUser } from "../../models/IUser";
+import { IUser } from "../../models/intefaces";
 
 interface TableProps{
-    allUsers: IUser[]
+    allUsers: IUser[];
+    onDeleteHadler: (id: string) => void;
 }
 
-const Table: React.FC<TableProps> = ({allUsers}) => {
+const Table: React.FC<TableProps> = ({allUsers, onDeleteHadler}) => {
     return (
         <>
             {allUsers.length < 1 ? 
@@ -29,7 +30,10 @@ const Table: React.FC<TableProps> = ({allUsers}) => {
                                 <td>{user.email}</td>
                                 <td>{user.phone}</td>
                                 <td>
-                                    <button>Delete</button>
+                                    <button
+                                        onClick={()=>onDeleteHadler(user.id)}
+                                    >Delete
+                                    </button>
                                 </td>
                             </tr>
                         )

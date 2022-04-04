@@ -13,5 +13,3 @@ export interface IFormUser {
     dateofbirth: string;
     phone: string;
 }
-
-export type fieldName = "firstname" | 'lastname' | 'email' | 'dateofbirth' | 'phone' | string
